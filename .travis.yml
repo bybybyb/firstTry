@@ -25,3 +25,8 @@ addons:
 script:
   # other script steps might be done before running the actual analysis
  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=bybybyb_firstTry
+
+deploy:
+  provider: heroku
+    api_key:
+       secure: "6d20c055-5441-47e3-978a-f58fa8bdb81a"
