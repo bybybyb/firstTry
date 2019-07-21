@@ -11,6 +11,19 @@ cache:
 notifications:
   email:
     recipients:
-      - demkozlov@yandex.ru
+      - fdsdfs.dsdf@yandex.ru
     on_success: always # default: change
     on_failure: always # default: always
+
+
+
+addons:
+  sonarcloud:
+    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    token:
+      secure: "BMBMkG0+lRrdL9yKkt/N3y50PONeUMVuqEgi/HIOmTOGYYBwoFXR0FhF4kIMqUM/abk6tk0+ZoTGAs8jSmRI4odnfArFTpjUReRr3+JNOcROKlW3F9jXg1GiLjXdXIT229T8gYa8zeyXUjt8e28OTaSO/84ui0LreM10y9chu/FPw+VKZWJe2loDiIwPt0eaJFpBbZrLzIP4QbybSDUuTHHKHrtOVAStiY0WapB4WkVTXFSMl0NxrQZJ8yabRKjtWK7ho0Ql4PAHVzX/H8yCG3XNw5R+GDVnhLGX++GN5RHblyK6HEyYfar5AkC9r+TYI877SkvGLnTnPzLSlENG4DItkBMLX01iYdswakoDItH/OJUvS4+vLsfBPIx04RhL0uiupXPDdE9aO3xt+6az49M98oVZe+F1ESp6t/CItUg8mOOh6yy+OTh4O2OGpFcLLJ7sLLU9W7WNE2vkZZfO2gib9078A7yHywQtiUV20LRIQXUQO+0iTg/c+bVCEIUJ9diO2PVPC8H4UgtbDxcr92CkQP/CpAdbn6C6LU668ueU8IMG9O9FkAF0n87IF+nLzqOIuU7ZojEXEt14VqvlXjr3fwmmaeCtMvdYyC1qA4kX/pIZkYzosZgKUW8f7XN/UDpwjsbAr0wVbUZQy+4vMQVaMENhPzZJ8EJ0WPOLlSs="
+  # encrypted value of your token
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean verify sonar:sonar -Pcoverage -Dsonar.projectKey=myorg_myrepo
+  -
