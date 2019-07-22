@@ -1,0 +1,21 @@
+language: java
+jdk: oraclejdk9
+cache:
+  directories:
+  - "$HOME/.m2"
+notifications:
+  email:
+    recipients:
+    - fdsdfs.dsdf@yandex.ru
+    on_success: always
+    on_failure: always
+#addons:
+ # sonarcloud:
+   # organization: bybybyb
+  #  token:
+    #  secure: cTZ+MNKkX7NjS0UfhcnIypzEEJgxigdZSeJEBpl0Hv6iOvVQNQ35ZeAICp6I/TI41kqBBYPqjFzFZyh7xo+m3V4ybU7fran7bksBXRHeAOCyCvrJEBBilx9p2z9chzfgvikm3Hnsj9AjMQC7IZ42yObs/lAdf2pUGBvepKVye050yiipCkHuZ7maPJdi4tUmxcU5/wl5vwg9H8ddWFpQKtXn/mR5o8ZxIIH6sqm12mep9CQUtlC+LWtAZCW6e5lvuHUstZ2umrTJyD7+GxckTIxmwhr/W7sHzU+tlx+0qTJzXVa2bBuAy/rnmmJFtXafWz1twEuorT0SN+CIJYwF8sBWXVfIl1+ePK2vk4vXoD6R/2MNDOC3pt9KdlljyMcfYPM+hOpcWRYeGM2ZjCaZFBXyfXU8bh62/9nbGLYWoYmG+BHl/IHAW+WUajfNAVrXG3YosDFo6otmZuNCu/iccL6GHYQZecupLFhC8fIEAx/5LWaXvMzH7Ff+VVlIT7WMy4OfuRATH7RNpEftE8SQMBgiEo72YXJsDh1c5HwayXRpzLor4FBd7k5ueNXVpJS90m0jzrK7VPmmFtfW+C9TvNH31RepcvJpxDrG2WY2rn70dLEnLampGBtfc4bpXcRFpXvXpT/2hqcVvL6LPScVeasU2oI4luUfn/PCLBeeujI=
+#script:
+#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=bybybyb_firstTry
+#deploy:
+#  api_key:
+ #   secure: VptiJkqxw/js8tkburkkOgPsT743UGmA1PjLccs6k8/9GVzeiDmnp8savEN21glDkoDdg+xwcQzVNJC+k6NHYN/JExXAntzORacf81J1EhOmioZKOqWnv/XfME3ncecgozyehyd07Vumu165STgjeO0I3d5f7Qx6HK0HbSBf0LjmqY1vJi1dHPk3g3mwl4muBtNEtDOoRH3ysI9LpM9SjrNivJjBen46RWLEbNo9iGkT9n0uakU7IyW0DeqPaxHPcAGHT+5ZI3R3psiwo9ZSQY3GuDu6u8lzofnbhbSjCqL1SDzJPh02/QozHyuE1TxVRZJghBZSZxt128iXIr6SeS/Io77M5e0qtbNGOvgrwHYtC3Jw5BP9r3R7npZvsN04T662oZuE/CgZiN/6kFRahCtKi3aXQoOpxJ46u7yeugxPKxxr8zG9Ff7utfpWrW9daF0xj2DH4TlqEP1RCkJLMidg+K6gxRmR0j1DZV0P9DzDdHCsKP1Ptqn7Wx4pbJtXDniQE6ZC2KHjM4eFQXt2jF6ST/QbDeUVTWNvvSHXydJDfwCA+qVyB78SKt0Gn4Z+Hpgt/OzXrhzOFwl5T7UtwpQ+PEkVX4zpbUa0Efh3/liRuFHIjPZp2aYTHcCpW6ZQIv+WcxuBZTc5FqqUh3+s8Zs4GbrI8u5pmgbnv/bPw8Q=
