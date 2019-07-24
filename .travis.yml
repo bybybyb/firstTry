@@ -9,3 +9,5 @@ notifications:
       - fdsdfs.dsdf@yandex.ru
     on_success: always
     on_failure: always
+script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=bybybyb_firstTry
