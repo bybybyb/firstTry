@@ -1,11 +1,27 @@
+# https://docs.travis-ci.com/user/languages/java/
 language: java
 jdk: oraclejdk9
+
+# Improve Build Speed https://dzone.com/articles/travis-ci-tutorial-java-projects
 cache:
   directories:
-    - "$HOME/.m2"
+    - $HOME/.m2
+
+# Notifications https://docs.travis-ci.com/user/notifications/
 notifications:
   email:
     recipients:
       - fdsdfs.dsdf@yandex.ru
-    on_success: always
-    on_failure: always
+    on_success: always # default: change
+    on_failure: always # default: always
+
+
+addons:
+  sonarcloud:
+    organization: "bybybyb" # the key of the org you chose at step #3
+    token:
+      secure: "cTZ+MNKkX7NjS0UfhcnIypzEEJgxigdZSeJEBpl0Hv6iOvVQNQ35ZeAICp6I/TI41kqBBYPqjFzFZyh7xo+m3V4ybU7fran7bksBXRHeAOCyCvrJEBBilx9p2z9chzfgvikm3Hnsj9AjMQC7IZ42yObs/lAdf2pUGBvepKVye050yiipCkHuZ7maPJdi4tUmxcU5/wl5vwg9H8ddWFpQKtXn/mR5o8ZxIIH6sqm12mep9CQUtlC+LWtAZCW6e5lvuHUstZ2umrTJyD7+GxckTIxmwhr/W7sHzU+tlx+0qTJzXVa2bBuAy/rnmmJFtXafWz1twEuorT0SN+CIJYwF8sBWXVfIl1+ePK2vk4vXoD6R/2MNDOC3pt9KdlljyMcfYPM+hOpcWRYeGM2ZjCaZFBXyfXU8bh62/9nbGLYWoYmG+BHl/IHAW+WUajfNAVrXG3YosDFo6otmZuNCu/iccL6GHYQZecupLFhC8fIEAx/5LWaXvMzH7Ff+VVlIT7WMy4OfuRATH7RNpEftE8SQMBgiEo72YXJsDh1c5HwayXRpzLor4FBd7k5ueNXVpJS90m0jzrK7VPmmFtfW+C9TvNH31RepcvJpxDrG2WY2rn70dLEnLampGBtfc4bpXcRFpXvXpT/2hqcVvL6LPScVeasU2oI4luUfn/PCLBeeujI="
+  # encrypted value of your token
+script:
+  # other script steps might be done before running the actual analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=bybybyb_firstTry
