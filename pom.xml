@@ -7,7 +7,6 @@
     <groupId>app.web.try</groupId>
     <artifactId>tryWebApp</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
 
     <build>
         <plugins>
