@@ -25,3 +25,8 @@ addons:
 script:
   # other script steps might be done before running the actual analysis
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=bybybyb_firstTry
+deploy:
+  provider: heroku
+  app: trywebappheroku
+  api_key:
+    secure: VptiJkqxw/js8tkburkkOgPsT743UGmA1PjLccs6k8/9GVzeiDmnp8savEN21glDkoDdg+xwcQzVNJC+k6NHYN/JExXAntzORacf81J1EhOmioZKOqWnv/XfME3ncecgozyehyd07Vumu165STgjeO0I3d5f7Qx6HK0HbSBf0LjmqY1vJi1dHPk3g3mwl4muBtNEtDOoRH3ysI9LpM9SjrNivJjBen46RWLEbNo9iGkT9n0uakU7IyW0DeqPaxHPcAGHT+5ZI3R3psiwo9ZSQY3GuDu6u8lzofnbhbSjCqL1SDzJPh02/QozHyuE1TxVRZJghBZSZxt128iXIr6SeS/Io77M5e0qtbNGOvgrwHYtC3Jw5BP9r3R7npZvsN04T662oZuE/CgZiN/6kFRahCtKi3aXQoOpxJ46u7yeugxPKxxr8zG9Ff7utfpWrW9daF0xj2DH4TlqEP1RCkJLMidg+K6gxRmR0j1DZV0P9DzDdHCsKP1Ptqn7Wx4pbJtXDniQE6ZC2KHjM4eFQXt2jF6ST/QbDeUVTWNvvSHXydJDfwCA+qVyB78SKt0Gn4Z+Hpgt/OzXrhzOFwl5T7UtwpQ+PEkVX4zpbUa0Efh3/liRuFHIjPZp2aYTHcCpW6ZQIv+WcxuBZTc5FqqUh3+s8Zs4GbrI8u5pmgbnv/bPw8Q=
