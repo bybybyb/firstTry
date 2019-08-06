@@ -1,0 +1,32 @@
+#blockCriteries {
+    background: lightgoldenrodyellow;
+    text-align: left;
+    vertical-align: middle;
+    width: 25%;
+    height: 100%;
+    float:left;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+#resultLink {
+    background: paleturquoise;
+    text-align: center;
+    vertical-align: middle;
+    width: 75%;
+    height: 100%;
+    float:right;
+    margin: auto;
+}
+
+#textResultLinks {
+    text-align: center;
+    text-decoration: underline;
+    font-family: "Times New Roman";
+    font-size: 120%;
+}
+
+h1 {
+    color:darkgreen;
+    text-align: center;
+}
