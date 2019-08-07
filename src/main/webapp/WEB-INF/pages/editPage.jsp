@@ -34,6 +34,7 @@
     <c:if test="${!empty film.title}">
         <input type="submit" value="Edit film">
     </c:if>
+
 </form>
 </body>
 </html>
